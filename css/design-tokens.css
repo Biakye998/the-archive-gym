@@ -1,0 +1,81 @@
+/* ============================================================
+   DESIGN TOKENS — THE ARCHIVE
+   Premium fitness brand design system
+   ============================================================ */
+
+:root {
+  /* ---- COLOR PALETTE ---- */
+  --color-bg:        #ffffff;   /* clean white */
+  --color-bg-soft:   #f8f9fb;   /* very light gray panel */
+  --color-surface:   #f0f2f5;   /* card / panel surface */
+  --color-surface-2: #e6e9ef;
+  --color-border:    #e1e4e9;
+  --color-border-soft: #d1d5db;
+
+  --color-ink:        #0f172a;  /* deep navy / dark text */
+  --color-ink-soft:   #334159;
+  --color-ink-faint:  #64748b;
+
+  --color-accent:     #1e40af;  /* deep royal blue */
+  --color-accent-soft:#2563eb;
+  --color-accent-glow:#3b82f6;
+
+  --color-line:       #e1e4e9;
+  --color-line-soft:  #d1d5db;
+
+  /* ---- TYPOGRAPHY ---- */
+  /* Display / Editorial Serif */
+  --font-display: "Fraunces", "Times New Roman", serif;
+  /* Headline / Sans */
+  --font-headline: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+  /* Body / UI Sans */
+  --font-body: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  /* Mono / labels */
+  --font-mono: "SF Mono", "JetBrains Mono", "Consolas", monospace;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi: 600;
+  --font-weight-bold: 700;
+
+  /* ---- SPACING ---- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+  --space-3xl: 128px;
+
+  /* ---- LAYOUT ---- */
+  --max-width: 1440px;
+  --gutter: clamp(24px, 4vw, 64px);
+
+  /* ---- MOTION ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 220ms;
+  --duration-mid: 420ms;
+  --duration-slow: 720ms;
+
+  /* ---- Z-INDEX ---- */
+  --z-nav: 100;
+  --z-mobile-menu: 90;
+  --z-overlay: 80;
+  --z-reveal: 1;
+}
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-mid: 0ms;
+    --duration-slow: 0ms;
+  }
+  * {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}

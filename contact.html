@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — THE ARCHIVE</title>
+  <meta name="description" content="Contact THE ARCHIVE in St. Moritz. Schedule a tour, ask questions, or request a consultation.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+    /* Contact form styles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+    @media (max-width: 979px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: var(--space-md);
+    }
+    .form-group label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      background: var(--color-bg);
+      color: var(--color-ink);
+      transition: border-color var(--duration-fast) var(--ease-out);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+      border-color: var(--color-accent);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-error {
+      display: none;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2626;
+      margin-top: 4px;
+    }
+    .form-error.active { display: block; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-success {
+      padding: var(--space-lg);
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      display: none;
+    }
+    .form-success.active { display: block; }
+    .form-success p {
+      font-family: var(--font-headline);
+      font-size: 15px;
+      color: var(--color-ink);
+    }
+    .map-frame {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      overflow: hidden;
+      background: var(--color-bg-soft);
+      border: 1px solid var(--color-border);
+    }
+    .map-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+
+    <div class="nav-scroll-progress"></div>
+
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-links">
+    <a href="index.html">HOME</a>
+    <a href="training.html">TRAINING</a>
+    <a href="membership.html">MEMBERSHIP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="trainers.html">COACHES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="join.html" class="btn btn-primary w-full">JOIN NOW</a>
+  </div>
+</div>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="section section-pad" data-component="contact-page">
+  <div class="container">
+    <div class="reveal-up">
+      <div class="section-label">CONTACT</div>
+      <h1 class="section-heading">Get in touch.</h1>
+      <p class="body-text">
+        Have questions about membership, training, or our facility? Fill out the form below and we'll respond within 24 hours.
+      </p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="contact-grid">
+      <form id="contact-form" class="reveal-left" data-component="contact-form" novalidate>
+        <div class="form-success" id="form-success">
+          <p>Thank you. Your message has been sent. We will contact you shortly.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" id="name" name="name" required minlength="2" />
+            <span class="form-error" id="error-name">Required</span>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" required minlength="2" />
+            <span class="form-error" id="error-last-name">Required</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="form-error" id="error-email">A valid email is required</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="inquiry-type">Inquiry Type</label>
+            <select id="inquiry-type" name="inquiry_type" required>
+              <option value="">Select</option>
+              <option value="membership">Membership</option>
+              <option value="training">Training Program</option>
+              <option value="tour">Schedule a Tour</option>
+              <option value="general">General Inquiry</option>
+            </select>
+            <span class="form-error" id="error-inquiry">Please select an option</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required minlength="10" placeholder="How can we help you?"></textarea>
+          <span class="form-error" id="error-message">Please enter at least 10 characters</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+
+      <div class="reveal-right">
+        <div class="cta-final-info">
+          <div class="cta-info-item">
+            <div class="cta-info-label">Location</div>
+            <div class="cta-info-value">Via Plinio 99, 7746 St. Moritz, Switzerland</div>
+          </div>
+          <div class="cta-info-item">
+            <div class="cta-info-label">Hours</div>
+            <div class="cta-info-value">Mon-Fri 6am-11pm<br>Sat-Sun 7am-11pm</div>
+          </div>
+          <div class="cta-info-item">
+            <div class="cta-info-label">Contact</div>
+            <div class="cta-info-value">+41 81 123 4567<br>applications@thearchive.ch</div>
+          </div>
+        </div>
+        <div class="map-frame">
+          <img src="images/hero/hero-1.jpg" alt="The Archive location" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE — 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Training</h4>
+        <ul>
+          <li><a href="strength.html">Strength</a></li>
+          <li><a href="personal-training.html">Personal Training</a></li>
+          <li><a href="group-training.html">Group Training</a></li>
+          <li><a href="recovery.html">Recovery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">The Space</a></li>
+          <li><a href="trainers.html">Coaches</a></li>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="contact.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  // Contact form validation
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var form = e.target;
+    let valid = true;
+
+    form.querySelectorAll('.form-error').forEach(el => el.classList.remove('active'));
+
+    const firstName = form.name.value.trim();
+    const lastName = form.last_name.value.trim();
+    const email = form.email.value.trim();
+    const inquiry = form.inquiry_type.value;
+    const message = form.message.value.trim();
+
+    if (!firstName || firstName.length < 2) {
+      document.getElementById('error-name').classList.add('active');
+      valid = false;
+    }
+    if (!lastName || lastName.length < 2) {
+      document.getElementById('error-last-name').classList.add('active');
+      valid = false;
+    }
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      document.getElementById('error-email').classList.add('active');
+      valid = false;
+    }
+    if (!inquiry) {
+      document.getElementById('error-inquiry').classList.add('active');
+      valid = false;
+    }
+    if (!message || message.length < 10) {
+      document.getElementById('error-message').classList.add('active');
+      valid = false;
+    }
+
+    if (valid) {
+      try {
+        form.classList.add('submitting');
+        var res = await fetch('/api/contacts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: form.phone.value.trim(),
+            inquiry_type: inquiry,
+            message: message
+          })
+        });
+
+        var data = await res.json();
+        if (res.ok) {
+          window.location.href = 'confirmation.html?ref=MSG-' + String(data.id).padStart(5, '0');
+        } else {
+          alert(data.error || 'Submission failed. Please try again.');
+        }
+      } catch (err) {
+        alert('Unable to submit message. Please check your connection and try again.');
+      } finally {
+        form.classList.remove('submitting');
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+

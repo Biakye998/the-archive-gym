@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE ARCHIVE — Premium Fitness Institution</title>
+  <meta name="description" content="THE ARCHIVE is a premium fitness institution built for those who take performance, discipline, and lifestyle seriously.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+
+    <div class="nav-scroll-progress"></div>
+
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+    <div class="nav-mobile-links">
+      <a href="index.html">HOME</a>
+      <a href="training.html">TRAINING</a>
+      <a href="membership.html">MEMBERSHIP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="trainers.html">COACHES</a>
+      <a href="day-pass.html">DAY PASS</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <div class="nav-mobile-cta">
+      <a href="join.html" class="btn btn-primary w-full">JOIN NOW</a>
+    </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" data-component="hero" data-content="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width: 979px)" srcset="images/hero/hero-2.jpg" />
+      <img src="images/hero/hero-1.jpg" alt="Athlete training in premium gym interior" loading="eager" fetchpriority="high" />
+    </picture>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      PERFORMANCE INSTITUTION
+    </div>
+
+    <h1 class="hero-headline">
+      BUILT FOR <em>MORE</em>
+    </h1>
+
+    <p class="hero-sub">
+      A private performance club for those who treat the physical pursuit with discipline and intent.
+    </p>
+
+    <div class="hero-actions">
+      <a href="membership.html" class="btn btn-primary btn-lg">EXPLORE MEMBERSHIP</a>
+      <a href="about.html" class="btn btn-ghost-light">OUR APPROACH</a>
+    </div>
+
+    <div class="hero-meta">
+      <span>EST. 2024</span>
+      <span>ST. MORITZ</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL TO EXPLORE</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience section" id="about" data-component="experience">
+  <div class="container">
+    <div class="experience-grid">
+      <div class="experience-statement reveal-left">
+        <div class="section-label">THE SPACE</div>
+        <h2 class="section-heading">A facility built without compromise.</h2>
+        <p class="body-text">
+          Every detail — from the architecture to the equipment — is chosen to support one purpose: pushing human performance.
+        </p>
+      </div>
+
+      <div class="experience-facts reveal-right">
+        <div class="experience-fact">
+          <div class="fact-num">01</div>
+          <div class="fact-title">24/7 Access</div>
+          <div class="fact-desc">Keycard entry to the Vault.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">02</div>
+          <div class="fact-title">Elite Equipment</div>
+          <div class="fact-desc">Eleiko, Rogue, Watson Gym.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">03</div>
+          <div class="fact-title">Performance Coaching</div>
+          <div class="fact-desc">1:1 and small group programs.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">04</div>
+          <div class="fact-title">Recovery</div>
+          <div class="fact-desc">Cryotherapy, sauna, and massage.</div>
+        </div>
+      </div>
+
+      <div class="experience-image reveal-up">
+        <img src="images/gym/gym-2.jpg" alt="Premium gym interior with strength equipment" loading="lazy" />
+        <div class="caption">THE VAULT — INTERIOR</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINING / PROGRAMS ===== -->
+<section class="training section" id="training" data-component="training">
+  <div class="container">
+    <div class="training-header reveal-up">
+      <div>
+        <div class="section-label">TRAINING</div>
+        <h2 class="section-heading">Programs built for progress.</h2>
+      </div>
+      <p class="body-text">
+        Every program is designed around your goals, supported by science and overseen by coaches who have competed at the highest levels.
+      </p>
+    </div>
+
+    <div class="training-hint" data-component="scroll-hint">
+      <span class="hint-text">Scroll to explore</span>
+      <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <line x1="3" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <polyline points="8,4 12,8 8,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="training-strip" data-component="training-strip">
+      <a href="strength.html" class="training-program reveal-up">
+        <div class="program-image">
+          <span class="program-number">01</span>
+          <span class="program-tag">Strength</span>
+          <img src="images/training/strength-1.jpg" alt="Strength training program" loading="lazy" />
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">STRENGTH</h3>
+          <p class="program-desc">Traditional and conjugate methods to build maximal strength through compound movements.</p>
+          <div class="program-footer">
+            <span class="program-duration">8–12 weeks</span>
+            <span class="program-link">
+              EXPLORE
+              <svg viewBox="0 0 16 16" fill="none"><line x1="4" y1="8" x2="12" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="8,4 12,8 8,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="personal-training.html" class="training-program reveal-up">
+        <div class="program-image">
+          <span class="program-number">02</span>
+          <span class="program-tag">PT</span>
+          <img src="images/training/strength-2.jpg" alt="Personal training session" loading="lazy" />
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">PERSONAL TRAINING</h3>
+          <p class="program-desc">One-on-one coaching with elite coaches, tailored to your specific goals and limitations.</p>
+          <div class="program-footer">
+            <span class="program-duration">Sessions available</span>
+            <span class="program-link">
+              EXPLORE
+              <svg viewBox="0 0 16 16" fill="none"><line x1="4" y1="8" x2="12" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="8,4 12,8 8,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="group-training.html" class="training-program reveal-up">
+        <div class="program-image">
+          <span class="program-number">03</span>
+          <span class="program-tag">Group</span>
+          <img src="images/training/strength-3.jpg" alt="Group training session" loading="lazy" />
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">GROUP TRAINING</h3>
+          <p class="program-desc">Small-group sessions with a rotating focus, from metabolic conditioning to skill development.</p>
+          <div class="program-footer">
+            <span class="program-duration">5 max per class</span>
+            <span class="program-link">
+              EXPLORE
+              <svg viewBox="0 0 16 16" fill="none"><line x1="4" y1="8" x2="12" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="8,4 12,8 8,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="recovery.html" class="training-program reveal-up">
+        <div class="program-image">
+          <span class="program-number">04</span>
+          <span class="program-tag">Recovery</span>
+          <img src="images/training/conditioning-1.jpg" alt="Recovery facilities" loading="lazy" />
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">RECOVERY</h3>
+          <p class="program-desc">Essential recovery protocols including contrast therapy, compression, and guided mobility work.</p>
+          <div class="program-footer">
+            <span class="program-duration">Included</span>
+            <span class="program-link">
+              EXPLORE
+              <svg viewBox="0 0 16 16" fill="none"><line x1="4" y1="8" x2="12" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="8,4 12,8 8,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEMBERSHIP ===== -->
+<section class="membership section" id="membership" data-component="membership">
+  <div class="container">
+    <div class="membership-header reveal-up">
+      <div class="section-label">MEMBERSHIP</div>
+      <h2 class="section-heading">Three paths to entry.</h2>
+      <p class="body-text">
+        Choose from three distinct membership tiers. Each grants full facility access with progressive access to coaching and recovery.
+      </p>
+    </div>
+
+    <div class="plans reveal-up">
+      <!-- PLAN 1 -->
+      <div class="plan" data-plan="core">
+        <h3 class="plan-name">Core</h3>
+        <p class="plan-desc">Full facility access, standard equipment, 24/7 entry.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">149</span>
+          <span class="period">/mo</span>
+        </div>
+        <ul class="plan-benefits">
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 24/7 facility access</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Standard equipment</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Members-only community</li>
+        </ul>
+        <a href="core.html" class="plan-cta btn btn-ghost">SELECT</a>
+      </div>
+
+      <!-- PLAN 2 -->
+      <div class="plan featured" data-plan="performance">
+        <h3 class="plan-name">Performance</h3>
+        <p class="plan-desc">Core access plus personal training sessions and quarterly assessments.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">349</span>
+          <span class="period">/mo</span>
+        </div>
+        <ul class="plan-benefits">
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Everything in Core</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 4 personal training sessions</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Quarterly performance review</li>
+        </ul>
+        <a href="performance.html" class="plan-cta btn btn-primary">SELECT</a>
+      </div>
+
+      <!-- PLAN 3 -->
+      <div class="plan" data-plan="archive">
+        <h3 class="plan-name">Archive</h3>
+        <p class="plan-desc">The complete experience: unlimited coaching, priority recovery, and dedicated support.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">749</span>
+          <span class="period">/mo</span>
+        </div>
+        <ul class="plan-benefits">
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Everything in Performance</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Unlimited personal training</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority recovery & nutrition</li>
+        </ul>
+        <a href="archive.html" class="plan-cta btn btn-secondary">SELECT</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA / CONTACT ===== -->
+<section class="cta-final section" id="contact" data-component="cta-final">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="cta-final-content reveal-left">
+        <div class="eyebrow">FIND US</div>
+        <h2 class="display-serif">Ready to begin.</h2>
+        <p class="body-text">
+          Membership is by application only. We conduct a brief consultation to ensure alignment between our methods and your commitment.
+        </p>
+        <div class="cta-final-actions">
+          <a href="join.html" class="btn btn-primary" id="cta-join">APPLY FOR MEMBERSHIP</a>
+          <a href="contact.html" class="btn btn-ghost-light">SCHEDULE TOUR</a>
+          <a href="day-pass.html" class="btn btn-ghost-light">REQUEST DAY PASS</a>
+        </div>
+      </div>
+
+      <div class="cta-final-info reveal-right">
+        <div class="cta-info-item">
+          <div class="cta-info-label">Location</div>
+          <div class="cta-info-value">Via Plinio 99, 7746 St. Moritz, Switzerland</div>
+        </div>
+        <div class="cta-info-item">
+          <div class="cta-info-label">Hours</div>
+          <div class="cta-info-value">Mon–Fri 6am–11pm<br>Sat–Sun 7am–11pm</div>
+        </div>
+        <div class="cta-info-item">
+          <div class="cta-info-label">Contact</div>
+          <div class="cta-info-value">+41 81 123 4567<br>applications@thearchive.ch</div>
+        </div>
+        <div class="cta-info-item">
+          <div class="cta-info-label">Social</div>
+          <div class="cta-info-value" style="display:flex;gap:10px">
+            <a href="https://instagram.com/thearchive" target="_blank" rel="noopener">IG</a>
+            <a href="https://youtube.com/thearchive" target="_blank" rel="noopener">YT</a>
+            <a href="https://twitter.com/thearchive" target="_blank" rel="noopener">TW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE — 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Training</h4>
+        <ul>
+          <li><a href="strength.html">Strength</a></li>
+          <li><a href="personal-training.html">Personal Training</a></li>
+          <li><a href="group-training.html">Group Training</a></li>
+          <li><a href="recovery.html">Recovery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">The Space</a></li>
+          <li><a href="trainers.html">Coaches</a></li>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="contact.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+

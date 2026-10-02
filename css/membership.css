@@ -1,0 +1,146 @@
+/* ============================================================
+   MEMBERSHIP — clear plan options
+   ============================================================ */
+
+.membership {
+  background: var(--color-bg);
+  padding: var(--space-3xl) 0;
+}
+
+.membership-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto var(--space-2xl);
+}
+.membership-header .section-label { margin-bottom: var(--space-sm); }
+.membership-header .section-heading { margin-bottom: var(--space-md); }
+.membership-header .body-text { margin: 0 auto; }
+
+/* ---- PLANS GRID ---- */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan {
+  background: var(--color-bg);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+  transition: background var(--duration-mid) var(--ease-out);
+}
+.plan:hover {
+  background: var(--color-surface);
+}
+
+.plan.featured {
+  background: var(--color-surface);
+}
+.plan.featured::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+}
+
+.plan-name {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.4vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.plan-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-ink-faint);
+  flex: 1;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+.plan-price .currency {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-ink-soft);
+}
+.plan-price .amount {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+.plan-price .period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-faint);
+  text-transform: uppercase;
+}
+
+.plan-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: var(--space-sm);
+}
+.plan-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+}
+.plan-benefits svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: var(--color-accent);
+}
+
+.plan-cta {
+  margin-top: auto;
+  display: block;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 979px) {
+  .plans {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+  .plan.featured {
+    order: -1;
+  }
+}
+@media (max-width: 560px) {
+  .membership {
+    padding: var(--space-2xl) 0;
+  }
+  .plan {
+    padding: var(--space-lg);
+  }
+}

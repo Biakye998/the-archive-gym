@@ -1,0 +1,29 @@
+{
+  "name": "archive-gym-platform",
+  "version": "1.0.0",
+  "description": "THE ARCHIVE - Gym website platform with admin panel, CMS, and business management system",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "admin": "node backend/server.js",
+    "start": "node backend/server.js",
+    "migrate": "node backend/migrate.js",
+    "seed": "node backend/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.4",
+    "pg": "^8.23.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "playwright": "^1.63.0"
+  }
+}

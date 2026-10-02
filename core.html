@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Plan â€” THE ARCHIVE</title>
+  <meta name="description" content="Core membership at THE ARCHIVE. Full facility access, standard equipment, 24/7 entry. $149/month.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+    .plan-detail {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .plan-detail-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    .plan-price-detail {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 8vw, 88px);
+      line-height: 1;
+      font-weight: 600;
+      margin: var(--space-md) 0;
+    }
+    .plan-price-detail .currency { color: var(--color-ink-soft); }
+    .plan-price-detail .amount { color: var(--color-accent); }
+    .plan-price-detail .period {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--color-ink-faint);
+      text-transform: uppercase;
+    }
+    .plan-benefits-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: var(--space-xl) 0;
+    }
+    @media (max-width: 560px) {
+      .plan-benefits-detail { grid-template-columns: 1fr; }
+    }
+    .plan-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: var(--space-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+    }
+    .plan-benefit-item svg { flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+
+    <div class="nav-scroll-progress"></div>
+
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html?plan=core" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-links">
+    <a href="index.html">HOME</a>
+    <a href="training.html">TRAINING</a>
+    <a href="membership.html">MEMBERSHIP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="trainers.html">COACHES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="join.html?plan=core" class="btn btn-primary w-full">JOIN NOW</a>
+  </div>
+</div>
+
+<!-- ===== PLAN DETAIL ===== -->
+<section class="section section-pad">
+  <div class="container">
+    <div class="plan-detail">
+      <div class="plan-detail-header reveal-up">
+        <div class="section-label">CORE PLAN</div>
+        <h1 class="section-heading">Full facility access.</h1>
+        <p class="body-text">
+          Everything you need for independent training in our premium facility.
+        </p>
+        <div class="plan-price-detail">
+          <span class="currency">$</span>
+          <span class="amount">149</span>
+          <span class="period">/month</span>
+        </div>
+      </div>
+
+      <div class="plan-benefits-detail reveal-up">
+        <div class="plan-benefit-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8,12 12,16 16,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          24/7 facility access
+        </div>
+        <div class="plan-benefit-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8,12 12,16 16,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Standard equipment access
+        </div>
+        <div class="plan-benefit-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8,12 12,16 16,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Members-only community access
+        </div>
+        <div class="plan-benefit-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="8,12 12,16 16,8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Locker room and amenities
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="cta-final-content reveal-left" style="max-width:48ch">
+        <div class="eyebrow">NOT THE RIGHT PLAN?</div>
+        <h2 class="display-serif">Explore other options.</h2>
+        <p class="body-text">
+          We also offer Performance and Archive tiers with coaching, recovery, and nutrition services.
+        </p>
+        <div class="cta-final-actions">
+          <a href="membership.html" class="btn btn-ghost">VIEW ALL PLANS</a>
+          <a href="join.html?plan=core" class="btn btn-primary">APPLY FOR CORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE â€” 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Training</h4>
+        <ul>
+          <li><a href="strength.html">Strength</a></li>
+          <li><a href="personal-training.html">Personal Training</a></li>
+          <li><a href="group-training.html">Group Training</a></li>
+          <li><a href="recovery.html">Recovery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">The Space</a></li>
+          <li><a href="trainers.html">Coaches</a></li>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="contact.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+

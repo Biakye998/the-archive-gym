@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — THE ARCHIVE</title>
+  <meta name="description" content="THE ARCHIVE is a premium fitness institution built for those who take performance, discipline, and lifestyle seriously.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+
+    <div class="nav-scroll-progress"></div>
+
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-links">
+    <a href="index.html">HOME</a>
+    <a href="training.html">TRAINING</a>
+    <a href="membership.html">MEMBERSHIP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="trainers.html">COACHES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="join.html" class="btn btn-primary w-full">JOIN NOW</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" data-component="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width: 979px)" srcset="images/hero/hero-2.jpg" />
+      <img src="images/gym/gym-1.jpg" alt="The Archive gym interior" loading="eager" fetchpriority="high" />
+    </picture>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">OUR APPROACH</div>
+    <h1 class="hero-headline">
+      DISCIPLINE <em>METHOD</em>
+    </h1>
+    <p class="hero-sub">
+      A private performance club for those who treat the physical pursuit with discipline and intent.
+    </p>
+    <div class="hero-actions">
+      <a href="join.html" class="btn btn-primary btn-lg">APPLY FOR MEMBERSHIP</a>
+      <a href="trainers.html" class="btn btn-ghost-light">MEET OUR COACHES</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPROACH ===== -->
+<section class="experience section section-pad">
+  <div class="container">
+    <div class="experience-grid">
+      <div class="experience-statement reveal-left">
+        <div class="section-label">THE METHODOLOGY</div>
+        <h2 class="section-heading">Performance through discipline.</h2>
+        <p class="body-text">
+          At THE ARCHIVE, we start from the premise that sustainable progress comes from consistency, not intensity. Our methodology combines evidence-based training principles with individualized coaching to build lasting habits.
+        </p>
+        <div class="cta-final-actions" style="margin-top: var(--space-lg)">
+          <a href="trainers.html" class="btn btn-primary">MEET OUR COACHES</a>
+          <a href="contact.html" class="btn btn-ghost-light">SCHEDULE CONSULTATION</a>
+        </div>
+      </div>
+
+      <div class="experience-facts reveal-right" id="methodology">
+        <div class="experience-fact">
+          <div class="fact-num">01</div>
+          <div class="fact-title">Assessment</div>
+          <div class="fact-desc">Movement screen, goal alignment, baseline metrics recorded.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">02</div>
+          <div class="fact-title">Programming</div>
+          <div class="fact-desc">Custom program designed from assessment data.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">03</div>
+          <div class="fact-title">Execution</div>
+          <div class="fact-desc">Guided sessions with technique feedback and adjustments.</div>
+        </div>
+        <div class="experience-fact">
+          <div class="fact-num">04</div>
+          <div class="fact-title">Review</div>
+          <div class="fact-desc">Quarterly re-assessment and program iteration.</div>
+        </div>
+      </div>
+
+      <div class="experience-image reveal-up">
+        <img src="images/gym/gym-2.jpg" alt="Premium gym interior with strength equipment" loading="lazy" />
+        <div class="caption">THE VAULT — INTERIOR</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACILITY DETAIL ===== -->
+<section class="section section-pad" data-component="facility-detail">
+  <div class="container">
+    <div class="reveal-up">
+      <div class="section-label">THE SPACE</div>
+      <h2 class="section-heading">A facility built without compromise.</h2>
+      <p class="body-text">
+        Every detail — from the architecture to the equipment — is chosen to support one purpose: pushing human performance. Located in St. Moritz, Switzerland, with 24/7 keycard access.
+      </p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="experience-grid" style="margin-top: var(--space-2xl)">
+      <div class="experience-statement reveal-left">
+        <div class="fact-num">01</div>
+        <h3 class="section-heading" style="max-width:14ch">24/7 Access</h3>
+        <p class="body-text">Keycard entry to the Vault. Your access is available around the clock, seven days a week.</p>
+      </div>
+      <div class="experience-fact reveal-right">
+        <div class="fact-num">02</div>
+        <div class="fact-title">Elite Equipment</div>
+        <div class="fact-desc">Eleiko, Rogue, Watson Gym — all competition-grade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  [data-component="facility-detail"] .experience-grid .experience-statement .fact-num,
+  [data-component="facility-detail"] .experience-grid .experience-fact .fact-num {
+    font-size: clamp(32px, 3vw, 48px);
+  }
+</style>
+
+<!-- ===== CTA ===== -->
+<section class="cta-final section section-pad">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="cta-final-content reveal-left">
+        <div class="eyebrow">READY TO BEGIN</div>
+        <h2 class="display-serif">Your journey starts here.</h2>
+        <p class="body-text">
+          Membership is by application only. We conduct a brief consultation to ensure alignment between our methods and your commitment.
+        </p>
+        <div class="cta-final-actions">
+          <a href="join.html" class="btn btn-primary">APPLY FOR MEMBERSHIP</a>
+          <a href="contact.html" class="btn btn-ghost-light">SCHEDULE TOUR</a>
+        </div>
+      </div>
+      <div class="cta-final-info reveal-right">
+        <div class="cta-info-item">
+          <div class="cta-info-label">Location</div>
+          <div class="cta-info-value">Via Plinio 99, 7746 St. Moritz, Switzerland</div>
+        </div>
+        <div class="cta-info-item">
+          <div class="cta-info-label">Hours</div>
+          <div class="cta-info-value">Mon-Fri 6am-11pm<br>Sat-Sun 7am-11pm</div>
+        </div>
+        <div class="cta-info-item">
+          <div class="cta-info-label">Contact</div>
+          <div class="cta-info-value">+41 81 123 4567<br>applications@thearchive.ch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE — 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Training</h4>
+        <ul>
+          <li><a href="strength.html">Strength</a></li>
+          <li><a href="personal-training.html">Personal Training</a></li>
+          <li><a href="group-training.html">Group Training</a></li>
+          <li><a href="recovery.html">Recovery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">The Space</a></li>
+          <li><a href="trainers.html">Coaches</a></li>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="contact.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+
+

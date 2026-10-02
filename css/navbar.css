@@ -1,0 +1,255 @@
+/* ============================================================
+   NAVBAR — refined minimal navigation
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px var(--gutter);
+  transition: background var(--duration-mid) var(--ease-out),
+              backdrop-filter var(--duration-mid) var(--ease-out),
+              padding var(--duration-mid) var(--ease-out);
+  pointer-events: none;
+}
+
+.nav.is-scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  pointer-events: auto;
+}
+
+/* ---- LOGO ---- */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+.nav-brand:hover { opacity: 0.7; }
+.nav-brand-mark {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-accent);
+}
+
+/* ---- LINKS ---- */
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 36px;
+}
+.nav-links a {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-mid) var(--ease-out);
+}
+.nav-links a:hover {
+  color: var(--color-ink);
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---- CTA BUTTON ---- */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-headline);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 12px 22px;
+  border: 1px solid var(--color-accent);
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+.nav-cta:hover {
+  background: var(--color-accent-glow);
+  border-color: var(--color-accent-glow);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(30, 64, 175, 0.45);
+}
+.nav-cta:active { transform: translateY(0); }
+
+/* ---- MOBILE TOGGLE ---- */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--color-ink);
+  margin: 0 auto;
+  transition: transform var(--duration-mid) var(--ease-out),
+              opacity var(--duration-mid) var(--ease-out),
+              width var(--duration-mid) var(--ease-out);
+}
+.nav-toggle.is-open {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+  width: 22px;
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+  width: 22px;
+}
+
+/* ---- MOBILE MENU ---- */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(90vw, 420px);
+  background: var(--color-bg);
+  z-index: var(--z-mobile-menu);
+  display: flex;
+  flex-direction: column;
+  padding: 28px var(--gutter);
+  transform: translateX(100%);
+  transition: transform var(--duration-mid) var(--ease-out);
+  border-left: 1px solid var(--color-border);
+}
+.nav-mobile.is-open {
+  transform: translateX(0);
+  z-index: calc(var(--z-nav) + 1);
+}
+.nav-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+.nav-mobile-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  background: none;
+  color: var(--color-ink);
+  font-size: 18px;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+.nav-mobile-close:hover { border-color: var(--color-accent); }
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-xl);
+}
+.nav-mobile-links a {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 8vw, 56px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-ink-soft);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border-soft);
+  transition: color var(--duration-mid) var(--ease-out),
+              padding-left var(--duration-mid) var(--ease-out);
+}
+.nav-mobile-links a:hover {
+  color: var(--color-ink);
+  padding-left: 8px;
+}
+
+.nav-mobile-cta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---- SCROLL PROGRESS ---- */
+.nav-scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width var(--duration-fast) linear;
+}
+
+/* ---- DESKTOP ---- */
+@media (min-width: 980px) {
+  .nav-links { display: flex; }
+  .nav-toggle { display: none; }
+  .nav-mobile { display: none; }
+}

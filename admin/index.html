@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — THE ARCHIVE Admin</title>
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+<body>
+  <div id="admin-app" class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">A</div>
+        <span class="sidebar-title">THE ARCHIVE</span>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-ghost btn-sm" id="logout-btn">Logout</button>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="top-bar">
+        <button class="btn btn-ghost btn-sm mobile-menu-btn" id="mobile-menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="top-bar-title" id="page-title">Dashboard</div>
+        <div class="top-bar-user">
+          <span id="user-email"></span>
+        </div>
+      </header>
+      <main class="content-area" id="content-area"></main>
+    </div>
+
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+  </div>
+
+  <script src="/assets/js/api-client.js"></script>
+  <script src="/assets/js/admin.js"></script>
+</body>
+</html>

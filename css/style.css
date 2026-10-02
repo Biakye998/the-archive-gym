@@ -1,0 +1,98 @@
+@import url("design-tokens.css");
+@import url("base.css");
+@import url("buttons.css");
+@import url("navbar.css");
+@import url("hero.css");
+@import url("experience.css");
+@import url("training.css");
+@import url("membership.css");
+@import url("cta-footer.css");
+
+/* ============================================================
+   THE ARCHIVE — Premium Fitness Brand
+   Main stylesheet entry point
+   ============================================================ */
+
+/* ============================================================
+   RESPONSIVE IMAGE TREATMENT HELPERS
+   ============================================================ */
+
+/* Aspect ratio containers */
+.ar-16-9 { aspect-ratio: 16 / 9; }
+.ar-21-9 { aspect-ratio: 21 / 9; }
+.ar-4-3  { aspect-ratio: 4 / 3; }
+.ar-1-1  { aspect-ratio: 1 / 1; }
+
+/* Image overlay treatments */
+.img-gradient-bottom {
+  position: relative;
+}
+.img-gradient-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.85));
+  pointer-events: none;
+}
+.img-gradient-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.7), transparent);
+  pointer-events: none;
+}
+
+/* ---- REVEAL ON SCROLL ---- */
+.reveal-up {
+  opacity: 0;
+  transition: opacity var(--duration-mid) var(--ease-out);
+}
+.reveal-up.is-visible {
+  opacity: 1;
+}
+
+.reveal-left {
+  opacity: 0;
+  transition: opacity var(--duration-mid) var(--ease-out);
+}
+.reveal-left.is-visible {
+  opacity: 1;
+}
+
+.reveal-right {
+  opacity: 0;
+  transition: opacity var(--duration-mid) var(--ease-out);
+}
+.reveal-right.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- UTILITY ---- */
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+.d-flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }

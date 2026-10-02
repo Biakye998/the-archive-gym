@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join â€” THE ARCHIVE</title>
+  <meta name="description" content="Apply for membership at THE ARCHIVE. Complete the application form to begin your journey.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+    /* Application form styles */
+    .form-container {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: var(--space-md);
+    }
+    .form-group label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      background: var(--color-bg);
+      color: var(--color-ink);
+      transition: border-color var(--duration-fast) var(--ease-out);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+      border-color: var(--color-accent);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-error {
+      display: none;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dc2626;
+      margin-top: 4px;
+    }
+    .form-error.active { display: block; }
+    .form-success {
+      padding: var(--space-lg);
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      display: none;
+    }
+    .form-success.active { display: block; }
+    .form-success p {
+      font-family: var(--font-headline);
+      font-size: 15px;
+      color: var(--color-ink);
+    }
+    .selection-summary {
+      display: none;
+      margin-bottom: var(--space-xl);
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-soft);
+    }
+    .selection-summary:dir(ltr) { padding-left: var(--space-md); }
+    /* Plan selector */
+    .plan-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: var(--space-md);
+    }
+    .plan-option {
+      flex: 1;
+      min-width: 140px;
+      border: 1px solid var(--color-border);
+      padding: 14px 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--duration-fast) var(--ease-out);
+      font-family: var(--font-headline);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-ink-soft);
+      background: var(--color-bg);
+    }
+    .plan-option:hover {
+      border-color: var(--color-accent);
+      color: var(--color-ink);
+    }
+    .plan-option.selected {
+      border-color: var(--color-accent);
+      background: rgba(30, 64, 175, 0.04);
+      color: var(--color-accent);
+    }
+    .plan-option input {
+      display: none;
+    }
+    /* Progress steps */
+    .progress-steps {
+      display: flex;
+      gap: 0;
+      margin-bottom: var(--space-xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .progress-step {
+      flex: 1;
+      text-align: center;
+      padding: var(--space-sm) 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      border-bottom: 2px solid transparent;
+    }
+    .progress-step.active {
+      color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+
+    <div class="nav-scroll-progress"></div>
+
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-links">
+    <a href="index.html">HOME</a>
+    <a href="training.html">TRAINING</a>
+    <a href="membership.html">MEMBERSHIP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="trainers.html">COACHES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="join.html" class="btn btn-primary w-full">JOIN NOW</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" data-component="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width: 979px)" srcset="images/hero/hero-2.jpg" />
+      <img src="images/gym/gym-3.jpg" alt="Gym interior" loading="eager" fetchpriority="high" />
+    </picture>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">APPLICATION</div>
+    <h1 class="hero-headline">
+      BEGIN <em>YOUR</em> JOURNEY
+    </h1>
+    <p class="hero-sub">
+      Membership is by application only. Complete the form below to start your consultation process.
+    </p>
+  </div>
+</section>
+
+<!-- ===== APPLICATION FORM ===== -->
+<section class="membership section section-pad">
+  <div class="container">
+    <div class="membership-header reveal-up">
+      <div class="section-label">MEMBERSHIP APPLICATION</div>
+      <h2 class="section-heading">Start your application.</h2>
+      <p class="body-text">
+        We conduct a brief consultation to ensure alignment between our methods and your commitment. All plans are month-to-month.
+      </p>
+    </div>
+
+    <div class="form-container">
+      <div class="form-success" id="application-success">
+        <p>Thank you for your application. Our team will review your details and contact you within 24 hours to schedule your consultation.</p>
+      </div>
+
+      <div id="selection-summary" class="selection-summary" style="display:none; margin-bottom: var(--space-xl); padding: var(--space-md); border: 1px solid var(--color-border); background: var(--color-bg-soft);">
+        <div class="section-label">YOUR SELECTION</div>
+        <div id="selection-text" style="font-family: var(--font-headline); font-size: 16px; color: var(--color-ink);"></div>
+        <a href="join.html" id="clear-selection" style="display: inline-block; margin-top: var(--space-sm); font-size: 12px; color: var(--color-ink-faint); text-decoration: underline;">Change selection</a>
+      </div>
+
+      <form id="application-form" novalidate>
+        <div class="progress-steps">
+          <div class="progress-step active">Your Details</div>
+          <div class="progress-step">Plan Selection</div>
+          <div class="progress-step">Goals</div>
+        </div>
+
+        <!-- Step 1: Personal Info -->
+        <div id="step-1" class="form-step active-step">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="app-name">First Name</label>
+              <input type="text" id="app-name" name="first_name" required minlength="2" />
+              <span class="form-error" id="app-error-name">Required</span>
+            </div>
+            <div class="form-group">
+              <label for="app-last-name">Last Name</label>
+              <input type="text" id="app-last-name" name="last_name" required minlength="2" />
+              <span class="form-error" id="app-error-last-name">Required</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="app-email">Email</label>
+            <input type="email" id="app-email" name="email" required />
+            <span class="form-error" id="app-error-email">Valid email required</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="app-phone">Phone</label>
+              <input type="tel" id="app-phone" name="phone" required />
+              <span class="form-error" id="app-error-phone">Required</span>
+            </div>
+            <div class="form-group">
+              <label for="app-age">Age</label>
+              <input type="number" id="app-age" name="age" min="16" max="80" required />
+              <span class="form-error" id="app-error-age">Must be 16+</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary w-full" id="to-step-2" style="margin-top: var(--space-sm);">
+            Continue to Plan
+          </button>
+        </div>
+
+        <!-- Step 2: Plan Selection -->
+        <div id="step-2" class="form-step" style="display:none;">
+          <div class="form-group">
+            <label>Select a plan</label>
+            <div class="plan-selector">
+              <label class="plan-option">
+                <input type="radio" name="plan" value="core" required />
+                Core â€” $149/mo
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="performance" />
+                Performance â€” $349/mo
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="archive" />
+                Archive â€” $749/mo
+              </label>
+            </div>
+            <span class="form-error" id="app-error-plan">Select a plan</span>
+          </div>
+
+          <div class="form-group">
+            <label for="app-program">Preferred Training</label>
+            <select id="app-program" name="program">
+              <option value="">Any program</option>
+              <option value="strength">Strength Training</option>
+              <option value="pt">Personal Training</option>
+              <option value="group">Group Training</option>
+              <option value="recovery">Recovery</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <button type="button" class="btn btn-ghost w-full" id="back-step-2">Back</button>
+            <button type="button" class="btn btn-primary w-full" id="to-step-3" style="margin-top: 0;">
+              Continue to Goals
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Goals -->
+        <div id="step-3" class="form-step" style="display:none;">
+          <div class="form-group">
+            <label for="app-goals">What are your primary goals?</label>
+            <textarea id="app-goals" name="goals" required minlength="10" placeholder="Describe your goals, current experience level, and any limitations..."></textarea>
+            <span class="form-error" id="app-error-goals">Please share your goals</span>
+          </div>
+
+          <div class="form-row">
+            <button type="button" class="btn btn-ghost w-full" id="back-step-3">Back</button>
+            <button type="submit" class="btn btn-primary w-full" style="margin-top: 0;">
+              Submit Application
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE â€” 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col">
+          <h4>Training</h4>
+          <ul>
+            <li><a href="strength.html">Strength</a></li>
+            <li><a href="personal-training.html">Personal Training</a></li>
+            <li><a href="group-training.html">Group Training</a></li>
+            <li><a href="recovery.html">Recovery</a></li>
+          </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">The Space</a></li>
+          <li><a href="trainers.html">Coaches</a></li>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="contact.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // ---- Variable declarations ----
+  var toStep2 = document.getElementById('to-step-2');
+  var backStep2 = document.getElementById('back-step-2');
+  var toStep3 = document.getElementById('to-step-3');
+  var backStep3 = document.getElementById('back-step-3');
+  var step1 = document.getElementById('step-1');
+  var step2 = document.getElementById('step-2');
+  var step3 = document.getElementById('step-3');
+  var progressSteps = document.querySelectorAll('.progress-step');
+  var summaryEl = document.getElementById('selection-summary');
+  var summaryTextEl = document.getElementById('selection-text');
+  var clearSelectionLink = document.getElementById('clear-selection');
+
+  // ---- Function declarations ----
+  function showError(id, show) {
+    var el = document.getElementById(id);
+    if (el) el.classList.toggle('active', show);
+  }
+
+  function showStep(stepNum) {
+    if (step1) step1.style.display = stepNum === 1 ? 'block' : 'none';
+    if (step2) step2.style.display = stepNum === 2 ? 'block' : 'none';
+    if (step3) step3.style.display = stepNum === 3 ? 'block' : 'none';
+    if (progressSteps && progressSteps.forEach) {
+      progressSteps.forEach(function(s, i) {
+        if (s) s.classList.toggle('active', i === stepNum - 1);
+      });
+    }
+  }
+
+  function validateStep1() {
+    var valid = true;
+    var name = document.getElementById('app-name');
+    var lastName = document.getElementById('app-last-name');
+    var email = document.getElementById('app-email');
+    var phone = document.getElementById('app-phone');
+    var age = document.getElementById('app-age');
+
+    var nameVal = name ? name.value.trim() : '';
+    var lastNameVal = lastName ? lastName.value.trim() : '';
+    var emailVal = email ? email.value.trim() : '';
+    var phoneVal = phone ? phone.value.trim() : '';
+    var ageVal = age ? age.value.trim() : '';
+
+    showError('app-error-name', !nameVal || nameVal.length < 2);
+    showError('app-error-last-name', !lastNameVal || lastNameVal.length < 2);
+    showError('app-error-email', !emailVal || !emailVal.includes('@') || !emailVal.includes('.'));
+    showError('app-error-phone', !phoneVal);
+    showError('app-error-age', !ageVal || ageVal < 16);
+
+    if (!nameVal || nameVal.length < 2) valid = false;
+    if (!lastNameVal || lastNameVal.length < 2) valid = false;
+    if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) valid = false;
+    if (!phoneVal) valid = false;
+    if (!ageVal || ageVal < 16) valid = false;
+
+    return valid;
+  }
+
+  function validateStep2() {
+    var plan = document.querySelector('input[name="plan"]:checked');
+    showError('app-error-plan', !plan);
+    return !!plan;
+  }
+
+  function validateStep3() {
+    var goals = document.getElementById('app-goals');
+    var goalsVal = goals ? goals.value.trim() : '';
+    showError('app-error-goals', goalsVal.length < 10);
+    return goalsVal.length >= 10;
+  }
+
+  // ---- URL parameter parsing & pre-selection ----
+  var selectedPlan = null;
+  var selectedProgram = null;
+  try {
+    var search = window.location.search || '';
+    if (typeof URLSearchParams !== 'undefined') {
+      var urlParams = new URLSearchParams(search);
+      selectedPlan = urlParams.get('plan');
+      selectedProgram = urlParams.get('program');
+    } else if (search) {
+      // Fallback for older browsers
+      var params = search.substring(1).split('&');
+      for (var i = 0; i < params.length; i++) {
+        var pair = params[i].split('=');
+        if (pair[0] === 'plan') selectedPlan = pair[1];
+        if (pair[0] === 'program') selectedProgram = pair[1];
+      }
+    }
+  } catch(e) {
+    console && console.error('URL param parsing failed:', e.message);
+  }
+
+  var planNames = { core: 'Core', performance: 'Performance', archive: 'Archive' };
+  var programNames = { strength: 'Strength Training', pt: 'Personal Training', group: 'Group Training', recovery: 'Recovery' };
+  var summaryText = '';
+
+  if (selectedPlan) {
+    var planRadio = document.querySelector('input[name="plan"][value="' + selectedPlan + '"]');
+    if (planRadio) {
+      planRadio.checked = true;
+      var closestLabel = planRadio.closest ? planRadio.closest('.plan-option') : null;
+      if (closestLabel) closestLabel.classList.add('selected');
+    }
+    summaryText += planNames[selectedPlan] || selectedPlan;
+  }
+  if (selectedProgram) {
+    var programSelect = document.getElementById('app-program');
+    if (programSelect) {
+      programSelect.value = selectedProgram;
+    }
+    summaryText += (selectedPlan ? ' + ' : '') + (programNames[selectedProgram] || selectedProgram);
+  }
+
+  // Show selection summary
+  if (summaryText && summaryEl && summaryTextEl) {
+    summaryTextEl.textContent = 'Selected: ' + summaryText;
+    summaryEl.style.display = 'block';
+    if (selectedPlan) {
+      showStep(2);
+    }
+  }
+
+  // ---- Plan selector interaction ----
+  var planOptions = document.querySelectorAll('.plan-option');
+  for (var j = 0; j < planOptions.length; j++) {
+    planOptions[j].addEventListener('click', function() {
+      var radio = this.querySelector('input[type="radio"]');
+      if (radio) {
+        radio.checked = true;
+        for (var k = 0; k < planOptions.length; k++) {
+          planOptions[k].classList.remove('selected');
+        }
+        this.classList.add('selected');
+      }
+    });
+  }
+
+  // ---- Clear selection link ----
+  if (clearSelectionLink) {
+    clearSelectionLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (summaryEl) summaryEl.style.display = 'none';
+      try { window.history.replaceState({}, '', 'join.html'); } catch(err) {}
+      showStep(1);
+    });
+  }
+
+  // ---- Multi-step form navigation ----
+  if (toStep2) {
+    toStep2.addEventListener('click', function() {
+      if (validateStep1()) showStep(2);
+    });
+  }
+
+  if (toStep3) {
+    toStep3.addEventListener('click', function() {
+      if (validateStep2()) showStep(3);
+    });
+  }
+
+  if (backStep2) {
+    backStep2.addEventListener('click', function() {
+      showError('app-error-plan', false);
+      showStep(1);
+    });
+  }
+
+  if (backStep3) {
+    backStep3.addEventListener('click', function() {
+      showError('app-error-goals', false);
+      showStep(2);
+    });
+  }
+
+  // ---- Form submission ----
+  var appForm = document.getElementById('application-form');
+  if (appForm) {
+    appForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (!validateStep2()) {
+        showStep(2);
+        return;
+      }
+      if (!validateStep3()) {
+        showStep(3);
+        return;
+      }
+
+      var formData = new FormData(appForm);
+      var plan = formData.get('plan');
+      var program = formData.get('program');
+
+      try {
+        var res = await fetch('/api/applications', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            first_name: formData.get('first_name'),
+            last_name: formData.get('last_name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            age: parseInt(formData.get('age')) || null,
+            plan_slug: plan || null,
+            program_slug: program || null,
+            goals: formData.get('goals')
+          })
+        });
+
+        var data = await res.json();
+        if (res.ok) {
+          window.location.href = 'confirmation.html?ref=APP-' + String(data.id).padStart(5, '0');
+        } else {
+          alert(data.error || 'Submission failed. Please try again.');
+        }
+      } catch (err) {
+        alert('Unable to submit application. Please check your connection and try again.');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
+

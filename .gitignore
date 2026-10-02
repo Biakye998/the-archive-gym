@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+*.env
+.env.local
+.env.*.local
+
+# Data
+data/
+uploads/
+audit-screenshots/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Test artifacts
+AUDIT-REPORT.json
+audit-output.txt
+
+# Temp
+fix-settings.js
+inspect-schema.js
+check_css.js
+check_js.js
+compare.js
+test_js.js
+verify_join.js

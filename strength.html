@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strength Training â€” THE ARCHIVE</title>
+  <meta name="description" content="Strength training program at THE ARCHIVE. Traditional and conjugate methods to build maximal strength through compound movements.">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .no-js .nav-links { display: flex; }
+    .no-js .nav-toggle { display: none; }
+    @media (max-width: 979px) {
+      .no-js .nav-links { flex-wrap: wrap; gap: 12px; font-size: 15px; }
+      .no-js .nav-links a { padding: 8px 0; }
+      .no-js .nav-cta { font-size: 15px; }
+    }
+    .program-detail { max-width: 800px; margin: 0 auto; }
+    .program-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border); margin: var(--space-xl) 0; }
+    @media (max-width: 560px) { .program-stats { grid-template-columns: 1fr; } }
+    .stat-item { background: var(--color-bg); padding: var(--space-lg); text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: clamp(24px, 2vw, 36px); color: var(--color-accent); }
+    .stat-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-ink-faint); }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" data-component="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" data-content="brand">
+      <span class="nav-brand-mark">A</span>
+      THE ARCHIVE
+    </a>
+    <div class="nav-scroll-progress"></div>
+    <div class="nav-links">
+      <a href="index.html" data-link="nav-home">HOME</a>
+      <a href="training.html" data-link="nav-training">TRAINING</a>
+      <a href="membership.html" data-link="nav-membership">MEMBERSHIP</a>
+      <a href="about.html" data-link="nav-about">ABOUT</a>
+      <a href="trainers.html" data-link="nav-trainers">COACHES</a>
+      <a href="day-pass.html" data-link="nav-day-pass">DAY PASS</a>
+      <a href="contact.html" data-link="nav-contact">CONTACT</a>
+      <a href="join.html?program=strength" class="nav-cta" data-cta="primary">JOIN NOW</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="nav-mobile" data-component="mobile-menu">
+  <div class="nav-mobile-header">
+    <span class="nav-brand"><span class="nav-brand-mark">A</span> THE ARCHIVE</span>
+    <button class="nav-mobile-close" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 18 18"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-links">
+    <a href="index.html">HOME</a>
+    <a href="training.html">TRAINING</a>
+    <a href="membership.html">MEMBERSHIP</a>
+    <a href="about.html">ABOUT</a>
+    <a href="trainers.html">COACHES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a href="join.html?program=strength" class="btn btn-primary w-full">JOIN NOW</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" data-component="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width: 979px)" srcset="images/hero/hero-2.jpg" />
+      <img src="images/training/strength-2.jpg" alt="Strength training session" loading="eager" fetchpriority="high" />
+    </picture>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">STRENGTH TRAINING</div>
+    <h1 class="hero-headline">BUILD <em>MAXIMAL</em> STRENGTH</h1>
+    <p class="hero-sub">Traditional and conjugate methods to build maximal strength through compound movements.</p>
+    <div class="hero-actions">
+      <a href="join.html?program=strength" class="btn btn-primary btn-lg">APPLY NOW</a>
+      <a href="trainers.html" class="btn btn-ghost-light">OUR COACHES</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM DETAIL ===== -->
+<section class="section section-pad">
+  <div class="container">
+    <div class="program-detail">
+      <div class="reveal-up">
+        <div class="section-label">PROGRAM DETAILS</div>
+        <h2 class="section-heading">Built for measurable progress.</h2>
+        <p class="body-text">
+          Our Strength program uses traditional and conjugate methods led by USAPL-certified coaches. You'll work through structured blocks focused on squat, bench press, deadlift, and overhead press.
+        </p>
+      </div>
+
+      <div class="program-stats reveal-up">
+        <div class="stat-item">
+          <div class="stat-num">3x/week</div>
+          <div class="stat-label">Frequency</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8-12w</div>
+          <div class="stat-label">Duration</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">All Levels</div>
+          <div class="stat-label">Prerequisites</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div>
+        <div class="reveal-left" style="max-width:48ch">
+          <h3 class="headline-md">What You'll Learn</h3>
+          <ul style="margin-top: var(--space-md); list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display:flex; align-items:center; gap: 12px;"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Proper barbell technique</li>
+            <li style="display:flex; align-items:center; gap: 12px;"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Periodized programming</li>
+            <li style="display:flex; align-items:center; gap: 12px;"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Competition prep support</li>
+            <li style="display:flex; align-items:center; gap: 12px;"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="4.5,9.5 7,12 13.5,6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Form assessment</li>
+          </ul>
+        </div>
+        <div class="reveal-right">
+          <img src="images/training/strength-1.jpg" alt="Strength training" loading="lazy" class="img-cover-frame" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-final section section-pad">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="cta-final-content reveal-left">
+        <div class="eyebrow">READY TO BEGIN</div>
+        <h2 class="display-serif">Your strength journey starts here.</h2>
+        <p class="body-text">Apply for membership and select the Strength program. Our team will contact you within 24 hours.</p>
+        <div class="cta-final-actions">
+          <a href="join.html?program=strength" class="btn btn-primary">APPLY NOW</a>
+          <a href="training.html" class="btn btn-ghost-light">OTHER PROGRAMS</a>
+        </div>
+      </div>
+      <div class="cta-final-info reveal-right">
+        <div class="cta-info-item"><div class="cta-info-label">Location</div><div class="cta-info-value">Via Plinio 99, 7746 St. Moritz, Switzerland</div></div>
+        <div class="cta-info-item"><div class="cta-info-label">Hours</div><div class="cta-info-value">Mon-Fri 6am-11pm<br>Sat-Sun 7am-11pm</div></div>
+        <div class="cta-info-item"><div class="cta-info-label">Contact</div><div class="cta-info-value">+41 81 123 4567<br>applications@thearchive.ch</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" data-component="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">A</div>
+        <p class="text-muted">THE ARCHIVE â€” 2024</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thearchive" target="_blank" rel="noopener" aria-label="Instagram" class="btn-icon">IG</a>
+          <a href="https://youtube.com/thearchive" target="_blank" rel="noopener" aria-label="YouTube" class="btn-icon">YT</a>
+          <a href="https://twitter.com/thearchive" target="_blank" rel="noopener" aria-label="Twitter" class="btn-icon">TW</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Training</h4><ul><li><a href="strength.html">Strength</a></li><li><a href="personal-training.html">Personal Training</a></li><li><a href="group-training.html">Group Training</a></li><li><a href="recovery.html">Recovery</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">The Space</a></li><li><a href="trainers.html">Coaches</a></li><li><a href="about.html#methodology">Methodology</a></li><li><a href="contact.html">Visit</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 THE ARCHIVE. ALL RIGHTS RESERVED.</span>
+      <span data-content="location">ST. MORITZ, SWITZERLAND</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+
